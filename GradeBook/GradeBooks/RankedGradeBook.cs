@@ -16,7 +16,7 @@ namespace GradeBook.GradeBooks
         {
             char result;
 
-            if(5 < Students.Count)
+            if(5 > Students.Count)
             {
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
             }
@@ -50,7 +50,7 @@ namespace GradeBook.GradeBooks
 
         public override void CalculateStatistics()
         {
-            if (5 < Students.Count)
+            if (5 > Students.Count)
             {
                 Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
             }
@@ -64,7 +64,7 @@ namespace GradeBook.GradeBooks
 
         public override void CalculateStudentStatistics(string name)
         {
-            if (5 < Students.Count)
+            if (5 > Students.Count)
             {
                 Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
             }
